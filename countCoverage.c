@@ -1,7 +1,7 @@
 #include "stdlib.h"
 #include "stdio.h"
 #include "string.h"
-#include "DNaseFlashh"
+#include "DNaseFlash.h"
 
 int menu_countCoverage(int argc, char **argv);
 
