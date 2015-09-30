@@ -1,7 +1,7 @@
-./countCoverage
-./extractFeature
-./predictModel
-./predictModelWholeGenome
-./predictModelWholeGenome_multithread
-./trainModel
+countCoverage
+extractFeature
+predictModel
+predictModelWholeGenome
+predictModelWholeGenome_multithread
+trainModel
 
