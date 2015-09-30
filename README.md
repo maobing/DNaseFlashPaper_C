@@ -1,4 +1,4 @@
-#### C version of DNaseFlash
+#### C version of DNaseFlash Paper
 
 Must be done tonight or tomorrow morning
 
