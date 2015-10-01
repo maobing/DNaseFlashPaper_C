@@ -12,8 +12,7 @@
  */
 
 int menu_predictModel(int argc, char **argv);
-int predictModel(char *trainingFile, char *testingFile, char *trainedModel, char *outputFile);
-void do_predict(FILE *, FILE *)
+void do_predict(FILE *, FILE *);
 
 /* some code from predict.c from liblinear */
 
@@ -101,7 +100,7 @@ int menu_predictModel(int argc, char **argv) {
     if (strcmp(argv[ni], "-m") == 0){
       ni++;
       strcpy(trainedModel, argv[ni]);
-      tmOK = 1;
+      mOK = 1;
     }
     else if (strcmp(argv[ni], "-tr") == 0){
       ni++;
@@ -126,15 +125,14 @@ int menu_predictModel(int argc, char **argv) {
   }
 
   /* check args */
-  if ((tmOK + trainOK + testOK + oOK) < 4){
+  if ((mOK + trainOK + testOK + oOK) < 4){
     printf("Error: input arguments not correct!\n");
     exit(EXIT_FAILURE);
   }
   else {
-    if(predictModel(trainedModel, trainFile, testFile, outputFile) != 0) {
-      printf("Error: predictModel failed\n");
-      return 1;
-    }
+    FILE *input = fopen(testFile, "r");
+    FILE *output = fopen(outputFile, "w");
+    do_predict(input, output);
   }
 
   /* free pointers */
