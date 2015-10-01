@@ -5,6 +5,4 @@ predictModelWholeGenome
 predictModelWholeGenome_multithread
 trainModel
 *.o
-liblinear-1.96
-samtools-0.1.18
 
