@@ -4,4 +4,4 @@ predictModel
 predictModelWholeGenome
 predictModelWholeGenome_multithread
 trainModel
-
+*.o
