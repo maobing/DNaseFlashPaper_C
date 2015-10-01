@@ -1,4 +1,6 @@
-linuxgcc:
+all:
+	cd samtools-0.1.18; make
+	cd liblinear-1.96; make
 	g++ -Wall -I ./samtools-0.1.18 -L./samtools-0.1.18 -c DNaseFlash.c -lbam -lz -lm -o DNaseFlash.o
 	g++ countCoverage.c DNaseFlash.o -L./samtools-0.1.18 -lbam -lz -lm -o countCoverage
 	g++ extractFeature.c DNaseFlash.o -L./samtools-0.1.18 -lbam -lz -lm -o extractFeature
