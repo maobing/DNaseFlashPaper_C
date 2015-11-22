@@ -1,3 +1,4 @@
+data/*
 countCoverage
 extractFeature
 predictModel
